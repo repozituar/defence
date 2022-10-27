@@ -15,7 +15,8 @@ class SayfaController extends Controller
      */
     public function index()
     {
-        //
+        $page = Sayfa::first()->translate('en');
+        return view('home', compact('page'));
     }
 
     /**
